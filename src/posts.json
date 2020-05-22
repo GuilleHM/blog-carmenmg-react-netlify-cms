@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1578205080,
+        "title": "Now Publishing With Netlify CMS!\r",
+        "author": "Will Jay\r",
+        "date": "January 05, 2020",
+        "time": "07:18",
+        "thumbnail": "/images/netlifyicon.png\r",
+        "content": "We're now publishing remotely. Calling on all who would like to contribute to my blog!\r\n\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/jsLUidiYm0w\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n"
+    },
+    {
+        "id": 1578048600,
+        "title": "This is a Test\r",
+        "author": "Will Jay\r",
+        "date": "January 03, 2020",
+        "time": "11:50",
+        "thumbnail": "/images/pumpbeerthumb.jpg\r",
+        "content": "\r\n# This is just a test post\r\n\r\n*Let's see what happens.*\r\n"
+    }
+]
