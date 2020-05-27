@@ -1,0 +1,11 @@
+.mainLayoutContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    .mainLayoutContainer {
+        display: initial;
+    }
+}

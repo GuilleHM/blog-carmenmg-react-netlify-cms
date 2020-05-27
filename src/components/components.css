@@ -1,7 +1,6 @@
 h1 {
-    font-family: "Raleway";
-    font-weight: 500;
-    margin: 0;
+    font-weight: 400;
+    color: darkblue;
 }
 
 .links {
@@ -10,44 +9,83 @@ h1 {
 }
 
 .layout-body {
+    font-family: 'Dawning of a New Day';
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 90vh;
-    padding: 20px;
+    padding: 1rem 1.5rem;
+    margin-top: 4rem;
 }
 
-.header {
+.selectedPost h1 {
+    font-size: 3.5rem;
+    margin: 0.5rem 0 1rem;
+    line-height: 3rem;
+}
+
+.selectedPost span, .selectedPostText {
+    font-size: 1.7rem;
+}
+
+.selectedPost small {
+    font-size: 1.4rem;
+}
+
+.selectedPostText p, .selectedPostText ul li {
+    overflow-wrap: break-word;
+    /* max-width: 100%; */
+}
+
+.selectedPostImageWrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.selectedPostImage {
+    width: 100%;
+}
+
+/* .header {
     background: navy;
     color: lightblue;
     padding: 10px 20px;
-}
+} */
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-around;
-}
+} */
 
-.footer {
+/* .footer {
     text-align: center;
-}
+} */
 
-.title {
+/* .title {
     margin-bottom: 20px;
-}
+} */
 
-.post-card {
+/* .postCard {
     text-align: left;
     font-family: "Raleway";
     border: 1px solid lightblue;
     margin-bottom: 20px;
     padding: 0 20px;
-}
+} */
 
-.img-container {
+/* .img-container {
     display: flex;
-}
+} */
 
-.thumbnail {
+/* .thumbnail {
     padding: 10px;
+} */
+
+@media (max-width: 500px) {
+    .layout-body {
+        margin-top: 3rem;
+    }
+    .selectedPostText h1 {
+        font-size: 3rem;
+    }
 }

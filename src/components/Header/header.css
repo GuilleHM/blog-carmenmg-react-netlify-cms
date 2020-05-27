@@ -1,0 +1,140 @@
+.header {
+    position: fixed;
+    top: 0;
+    background-color: #7c7874;
+    /* background-color: #565673; */
+    /* border-bottom: 1px solid #565673; */
+    /* background-color: transparent; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    z-index: 1;
+    font-family: "Dawning of a New Day";
+    width: 100%;
+    /* Transition effect when sliding up and down */
+    transition: transform 0.3s;
+}
+
+.scroll-down .header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .header {
+    transform: translate3d(0, -1%, 0);
+}
+
+.header a {
+    color: ivory;
+    margin: 0 35px 0 5px;
+}
+
+.headerMenu a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    /* letter-spacing: 1.2px; */
+    /* margin: 0 1rem; */
+    margin: 0 1.5rem 0 0.5rem;
+}
+
+/* .headerMenu a i {
+    color: ivory;
+} */
+
+.headerMenu a:hover, .headerMenu a i:hover {
+    color: #10bde9;
+    transition: all 0.2s ease-out;
+}
+
+.headerBarsMenu, .smallScreenNav {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .header {
+        right: -2rem;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    * {
+        box-sizing: border-box;
+    }
+    .header {
+        right: 0;
+        /* display: none; */
+        justify-content: space-between;
+        background-color: transparent;
+        padding-left: 1rem;
+    }
+    .headerMenu {
+        display: none;
+    }
+    .headerBarsMenu, .smallScreenNav {
+        display: initial;
+    }
+    .headerBarsMenu {
+        color: #565673;
+        /* color: ivory; */
+        z-index: 1;
+        /* margin: 0rem; */
+    }
+    .smallScreenNav {
+        position: fixed;
+        top: 0;
+        width: 120%;
+        visibility: hidden;
+    }
+    .smallScreenNav.show {
+        visibility: visible;
+        z-index: 2;
+    }
+    .smallScreenNav-menu {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: flex-start;
+        float: left;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 10% 0 0 10%;
+        background: rgba(55, 55, 55, 0.9);
+        list-style: none;
+        transform: translate3d(-120%, 0, 0);
+        transition: all 0.5s ease-out;
+    }
+    .smallScreenNav-menu.show {
+        transform: translate3d(-5%, 0, 0);
+        transition: all 0.5 ease-out;
+    }
+    .smallScreenNav .smallScreenNav-item.inicio>a {
+        margin-top: -2rem;
+        font-size: 3.5rem;
+        color: #10bde9;
+    }
+    .smallScreenNav .nav-link {
+        display: inline-block;
+        position: relative;
+        left: -25%;
+        font-size: 2.5rem;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+    }
+    .fa-window-close {
+        color: #111;
+        position: absolute;
+        top: 1%;
+        left: 5%;
+    }
+}
+
+@media (max-height: 360px) {
+    .headerMenu a {
+        font-size: 1.5rem;
+    }
+}

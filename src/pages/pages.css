@@ -1,3 +1,7 @@
+.hero {
+    position: relative;
+}
+
 .postlist {
     width: 40%;
     margin: auto;
@@ -21,4 +25,144 @@
 
 .notfound {
     text-align: center;
+}
+
+/* SearchResults */
+
+/* .searchMainPic {
+    height: 40vh;
+    background: #fff url('../assets/logoImages/busqueda.jpg') no-repeat center center / cover;
+    margin-bottom: 1.5rem;
+}
+
+.searchMainPic span {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 0 15px 5px;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #565673;
+    border-radius: 5px;
+    opacity: 0.9;
+} */
+
+.searchResultsPostsHeader {
+    /* text-transform: uppercase; */
+    font-family: 'Dawning of a New Day';
+    font-size: 4rem;
+    /* font-weight: 600; */
+    line-height: 3.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    color: #333;
+    margin: 0rem 3rem;
+    border-bottom: 1px solid #333;
+}
+
+.searchResultPostBriefing h1, .searchResultPostBriefing span {
+    font-family: 'Dawning of a New Day';
+    padding-right: 1rem;
+    padding-left: 1rem;
+    line-height: 2.2rem;
+    margin: 0 0 10px;
+}
+
+.searchResultPostBriefing h1 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.searchResultPostBriefing h1 .links:hover {
+    color: #10bde9;
+    transition: all 0.2s ease-out;
+}
+
+.searchResultPostBriefing span {
+    font-size: 1.5rem;
+}
+
+.showNoSearchResults {
+    display: block;
+    font-family: 'Dawning of a New Day';
+}
+
+.hideNoSearchResults {
+    display: none;
+}
+
+.searchResultsPosts h1 {
+    margin: auto 1rem 1rem;
+    padding-top: 1rem;
+}
+
+.showNoSearchResults h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.searchResultsPosts p {
+    margin: 0 auto;
+    padding: auto 1rem;
+}
+
+.showNoSearchResults p {
+    font-size: 2rem;
+    padding: 0 1rem auto;
+}
+
+.searchResultsPosts .postLink {
+    margin: 1rem auto;
+}
+
+/* ------ Media Queries ----- */
+
+/* Smartphones horizontales */
+
+@media (max-width: 850px) and (max-height: 500px) {
+    .searchResultsPostsHeader {
+        font-size: 2.8rem;
+        /* margin-top: 20px; */
+        margin-bottom: -5px;
+    }
+}
+
+/* Smartphones verticales */
+
+@media (max-width: 500px) {
+    .searchResultsPostsHeader span {
+        font-size: 2.3rem;
+    }
+    .searchResultsPosts h1, .showNoSearchResults h1 {
+        font-size: 2.1rem;
+    }
+    .searchResultsPosts h2, .showNoSearchResults h2 {
+        font-size: 1.9rem;
+        padding: 0 2rem;
+    }
+    .showNoSearchResults p {
+        font-size: 1.7rem;
+    }
+}
+
+/* Smartphones más pequeños verticales */
+
+@media (max-width: 380px) {
+    /* .showNoSearchResults h2 {
+        font-size: 1rem;
+    } */
+}
+
+/* Smartphones más pequeños (Iphone 5) verticales */
+
+@media (max-width: 340px) {
+    /* .showNoSearchResults p {
+        font-size: 0.7rem;
+    } */
 }

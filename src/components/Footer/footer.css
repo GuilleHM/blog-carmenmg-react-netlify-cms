@@ -1,0 +1,85 @@
+.main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #2b2b2b;
+    color: #fff;
+    height: 80px;
+}
+
+.main-footer p {
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.main-footer .title {
+    font-family: 'Dawning of a New Day', cursive;
+    font-size: 2.7rem;
+}
+
+.main-footer .subtitle {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 5px;
+    border-top: 1px solid #fff;
+    margin: 5px 0 1rem;
+}
+
+.main-footer p a {
+    color: #10bde9;
+}
+
+.main-footer img {
+    margin-top: 5px;
+    border-radius: 7px;
+}
+
+@media (max-width: 1050px) {
+    .license {
+        display: none;
+    }
+}
+
+/* 
+@media only screen and (max-device-width: 900px) and (orientation: landscape) {
+    .license {
+        display: none;
+    }
+} */
+
+@media only screen and (min-device-width: 600px) and (orientation: landscape) {
+    .main-footer p {
+        margin-left: 20px;
+    }
+    .main-footer img {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    .main-footer {
+        height: 100px;
+    }
+    .main-footer .title {
+        font-size: 1.3rem;
+    }
+    .main-footer p {
+        font-size: 0.7rem;
+    }
+    .main-footer a {
+        display: inline-block;
+        width: 40%;
+    }
+    .main-footer img {
+        margin-left: 1rem;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+    .main-footer a {
+        width: 25%;
+    }
+}

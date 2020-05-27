@@ -1,6 +1,7 @@
 import React from "react"
 import { Redirect } from "react-router-dom"
 import Markdown from "react-markdown"
+import Header from "../components/Header/header"
 import Layout from "../components/layout"
 import postlist from "../posts.json"
 import "./pages.css"
@@ -14,10 +15,12 @@ const Post = (props) => {
     let postExists = false
     postlist.forEach((post, i) => {
         if (validId === post.id) {
-            fetchedPost.title = post.title ? post.title : "No title given"
-            fetchedPost.date = post.date ? post.date : "No date given"
-            fetchedPost.author = post.author ? post.author : "No author given"
-            fetchedPost.content = post.content ? post.content : "No content given"
+            fetchedPost.title = post.title ? post.title : "Sin título"
+            fetchedPost.type = post.type ? post.type : "Sin tipo"
+            fetchedPost.image = post.image ? post.image : "Sin imagen"
+            fetchedPost.date = post.date ? post.date : "Sin fecha de publicación"
+            fetchedPost.author = post.author ? post.author : "Sin autor"
+            fetchedPost.content = post.content ? post.content : "Sin contenido"
             postExists = true
         }
     })
@@ -25,14 +28,23 @@ const Post = (props) => {
         return <Redirect to="/404" />
     }
     return (
-        <Layout>
-            <div className="post">
-                <h2>{fetchedPost.title}</h2>
-                <small>Published on {fetchedPost.date} by {fetchedPost.author}</small>
-                <hr />
-                <Markdown source={fetchedPost.content} escapeHtml={false} />
-            </div>
-        </Layout>
+        <React.Fragment>
+            <Header />
+            <Layout>
+                <div className="selectedPost" >
+                    <span>{fetchedPost.type}</span>
+                    <h1>{fetchedPost.title}</h1>
+                    {/* <span>Publicado el {fetchedPost.date} por {fetchedPost.author}</span> */}
+                    <small>Publicado el {fetchedPost.date} por {fetchedPost.author}</small>
+                    <hr />
+                    <div className="selectedPostImageWrapper">
+                        {fetchedPost.image && <img className="selectedPostImage" src={require(`../assets/recipeImages/${fetchedPost.image.trim()}`)} alt={fetchedPost.title} />}
+                    </div>
+                    <Markdown className="selectedPostText" source={fetchedPost.content} escapeHtml={false} />
+                </div>
+            </Layout>
+        </React.Fragment>
+
     )
 }
 

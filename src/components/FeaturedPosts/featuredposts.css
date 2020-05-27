@@ -1,0 +1,100 @@
+.featuredPostsContainer {
+    width: 62%;
+    margin-right: 2rem;
+}
+
+.featuredPostsHeader {
+    /* text-transform: uppercase; */
+    font-family: 'Dawning of a New Day';
+    font-size: 4rem;
+    /* font-weight: 400; */
+    line-height: 3.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    color: #333;
+    margin: 0rem 3rem;
+    border-bottom: 1px solid #333;
+}
+
+.postCard {
+    margin: 1rem 0 2rem;
+}
+
+.featuredPostImageWrapper {
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.featuredPostImageWrapper img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.postBriefing h1, .postBriefing span {
+    font-family: 'Dawning of a New Day';
+    padding-right: 1rem;
+    padding-left: 1rem;
+    line-height: 2.2rem;
+    margin: 0 0 10px;
+}
+
+.postBriefing h1 {
+    font-size: 3rem;
+}
+
+.postBriefing h1 .links:hover {
+    color: #10bde9;
+    transition: all 0.2s ease-out;
+}
+
+.postBriefing span {
+    font-size: 1.5rem;
+}
+
+/* .postBriefing p {
+    padding: 0 1rem;
+} */
+
+.postLink {
+    margin-top: 1rem;
+}
+
+.postLink a {
+    display: inline-block;
+    margin: 0 auto 15px;
+    position: relative;
+    padding: 0.5rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #10bde9;
+    border-radius: 5px;
+}
+
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+    .featuredPostsContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .featuredPostsHeader {
+        font-size: 2.5rem;
+        /* margin-top: 20px; */
+        margin-bottom: -5px;
+    }
+    .postBriefing h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 850px) and (max-height: 500px) {
+    .featuredPostsHeader {
+        font-size: 2.8rem;
+        /* margin-top: 20px; */
+        margin-bottom: -5px;
+    }
+    /* .postBriefing h1 {
+        font-size: 2rem;
+    } */
+}

@@ -2,23 +2,23 @@ const path = require("path")
 const fs = require("fs")
 
 const dirPath = path.join(__dirname, "../posts")
-const dirPathPages = path.join(__dirname, "../src/pages/content")
+// const dirPathPages = path.join(__dirname, "../src/pages/content")
 let postlist = []
-let pagelist = []
+// let pagelist = []
 
 const months = {
-    "01": "January",
-    "02": "February",
-    "03": "March",
-    "04": "April",
-    "05": "May",
-    "06": "June",
-    "07": "July",
-    "08": "August",
-    "09": "September",
-    "10": "October",
-    "11": "November",
-    "12": "December"
+    "01": "Enero",
+    "02": "Febrero",
+    "03": "Marzo",
+    "04": "Abril",
+    "05": "Mayo",
+    "06": "Junio",
+    "07": "Julio",
+    "08": "Agosto",
+    "09": "Septiembre",
+    "10": "Octubre",
+    "11": "Noviembre",
+    "12": "Diciembre"
 }
 
 const formatDate = (date) => {
@@ -70,18 +70,20 @@ const getPosts = () => {
                 const metadata = parseMetadata({ lines, metadataIndices })
                 const content = parseContent({ lines, metadataIndices })
                 const parsedDate = metadata.date ? formatDate(metadata.date) : new Date()
-                const publishedDate = `${parsedDate["monthName"]} ${parsedDate["day"]}, ${parsedDate["year"]}`
+                const publishedDate = `${parsedDate["day"]} de ${parsedDate["monthName"]} de ${parsedDate["year"]}`
                 const datestring = `${parsedDate["year"]}-${parsedDate["month"]}-${parsedDate["day"]}T${parsedDate["time"]}:00`
                 const date = new Date(datestring)
                 const timestamp = date.getTime() / 1000
                 post = {
                     id: timestamp,
-                    title: metadata.title ? metadata.title : "No title given",
-                    author: metadata.author ? metadata.author : "No author given",
-                    date: publishedDate ? publishedDate : "No date given",
+                    title: metadata.title ? metadata.title : "Título NO proporcinado",
+                    author: metadata.author ? metadata.author : "Autor NO proporcinado",
+                    date: publishedDate ? publishedDate : "Fecha de publicación NO proporcinada",
                     time: parsedDate["time"],
-                    thumbnail: metadata.thumbnail,
-                    content: content ? content : "No content given",
+                    type: metadata.type,
+                    image: metadata.image,
+                    featured: metadata.featured,
+                    content: content ? content : "Contenido NO proporcinado",
                 }
                 postlist.push(post)
                 ilist.push(i)
@@ -98,25 +100,25 @@ const getPosts = () => {
     return
 }
 
-const getPages = () => {
-    fs.readdir(dirPathPages, (err, files) => {
-        if (err) {
-            return console.log("Failed to list contents of directory: " + err)
-        }
-        files.forEach((file, i) => {
-            let page
-            fs.readFile(`${dirPathPages}/${file}`, "utf8", (err, contents) => {
-                page = {
-                    content: contents
-                }
-                pagelist.push(page)
-                let data = JSON.stringify(pagelist)
-                fs.writeFileSync("src/pages.json", data)
-            })
-        })
-    })
-    return
-}
+// const getPages = () => {
+//     fs.readdir(dirPathPages, (err, files) => {
+//         if (err) {
+//             return console.log("Failed to list contents of directory: " + err)
+//         }
+//         files.forEach((file, i) => {
+//             let page
+//             fs.readFile(`${dirPathPages}/${file}`, "utf8", (err, contents) => {
+//                 page = {
+//                     content: contents
+//                 }
+//                 pagelist.push(page)
+//                 let data = JSON.stringify(pagelist)
+//                 fs.writeFileSync("src/pages.json", data)
+//             })
+//         })
+//     })
+//     return
+// }
 
 getPosts()
-getPages()
+// getPages()
