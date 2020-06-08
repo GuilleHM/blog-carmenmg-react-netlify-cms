@@ -2,7 +2,7 @@
 title: Sopa de Mango
 author: Carmen Montado
 date: 2020-06-01T16:35:06.278Z
-type: Primero
+type: Postre
 image: sopaDeMango.jpg
 featured: true
 ---
