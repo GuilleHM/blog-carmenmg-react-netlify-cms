@@ -2,9 +2,9 @@
 title: Sopa de Mango
 author: Carmen Montado
 date: 2020-06-01T16:35:06.278Z
-type: Primero
-image: sopaDeMango.jpg
+type: Postre
 featured: true
+image: /images/sopademango.jpg
 ---
 
 # Ingredientes para 4 personas
