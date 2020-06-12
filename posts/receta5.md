@@ -1,5 +1,5 @@
 ---
-title: Garbanzos con langostinos
+title: Garbanzos con Langostinos
 author: Carmen Montado
 date: 2020-06-12T16:05:04.269Z
 type: Primero
