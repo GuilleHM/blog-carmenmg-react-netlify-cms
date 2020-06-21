@@ -4,7 +4,7 @@ author: Carmen Montado
 date: 2020-06-13T17:00:01.134Z
 type: Entrante
 image: almejasAlLimon.jpg
-featured: false
+featured: true
 ---
 
 # Ingredientes para 3 personas

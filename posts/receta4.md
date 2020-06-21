@@ -4,7 +4,7 @@ author: Carmen Montado
 date: 2020-06-08T17:19:01.278Z
 type: Entrante
 image: almejasALaMarinera.jpg
-featured: true
+featured: false
 ---
 
 # Ingredientes para 4 personas
