@@ -38,7 +38,7 @@ const SearchResults = (props) => {
                                     <div className="searchResultPostBriefing" style={{ textAlign: "center" }}>
                                         <span>{post.type}</span>
                                         <h1><a href={`/post/${post.id}`} className="links">{post.title}</a></h1>
-                                        <span>Publicado el {`${post.date}`} por GuilleHM</span>
+                                        <span>Publicado el {`${post.date}`} por {`${post.author}`}</span>
 
                                         <div className="postLink"><a href={`/post/${post.id}`}>Leer más</a></div>
                                     </div>
